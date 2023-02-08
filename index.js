@@ -155,7 +155,12 @@ const app = Vue.createApp({
             return phoneNumber.test(value) ? true : '需要正確的電話號碼'
         },
         onSubmit() {
-            console.log(this.userData);
+             if (this.cart.carts.length === 0) {
+                console.log('請新增商品');
+
+            } else {
+                console.log(this.userData);
+            }
         }
     },
     mounted() {
